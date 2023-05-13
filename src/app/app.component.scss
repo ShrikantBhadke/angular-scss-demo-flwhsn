@@ -1,0 +1,50 @@
+@import '../styles/variables';
+p {
+  font-family: Lato;
+  color: $bg1;
+}
+
+.card {
+  display: flex;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+  &.bg1 {
+    background-color: $bg1;
+  }
+  &.bg2 {
+    background-color: $bg2;
+  }
+  &.bg3 {
+    background-color: $bg3;
+  }
+}
+.theme {
+  padding: 10px;
+  &.dark {
+    background-color: gray;
+    color: white;
+  }
+  &.lite {
+    background-color: aqua;
+  }
+  &.solar {
+    background-color: salmon;
+  }
+}
+
+.w-1 {
+  width: w(1);
+}
+
+.w-50 {
+  width: w(50);
+}
+
+.w-100 {
+  width: w(100);
+}
+
+@function w($value) {
+  @return value + 'px';
+}

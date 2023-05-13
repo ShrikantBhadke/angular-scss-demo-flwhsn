@@ -1,0 +1,42 @@
+<div class="theme" [ngClass]="selectedTheme">
+  <hello (selectedThemeemit)="updateTheme($event)" name="{{ name }}"></hello>
+  <input
+    style="width: 60px"
+    type="number"
+    placeholder="w1"
+    [(ngModel)]="widths.w1"
+  />
+  <!-- <p>{{widths.w1}}</p> -->
+  <input
+    style="width: 60px"
+    type="number"
+    placeholder="w2"
+    [(ngModel)]="widths.w2"
+  />
+  <input
+    style="width: 60px"
+    type="number"
+    placeholder="w3"
+    [(ngModel)]="widths.w3"
+  />
+  <div class="card bg1" [style.width.px]="widths.w1"></div>
+  <div class="card bg2" [style.width.px]="widths.w2"></div>
+  <div class="card bg3" [style.width.px]="widths.w3"></div>
+</div>
+<hr />
+<div>
+  <b>To Do:</b>
+  <ol>
+    <li color>By default "Select Theme" should display in first drop-down.</li>
+    <li>On theme selection background of body should change.</li>
+    <li>
+      Write a sass function to use dynamic width class. E.g - w-1: 1px, w-50:
+      50px, w-100: 100px, so on.
+    </li>
+    <li>
+      Red, Green and Blue card width should be change based on w1,w2 and w3
+      input value.
+    </li>
+  </ol>
+</div>
+<app-new></app-new>
